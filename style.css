@@ -37,7 +37,7 @@ body {
   font-weight: bold;
 }
 
-/* HERO */
+/* HERO (FIXED NO OVERFLOW) */
 .hero {
   position: relative;
   min-height: 75vh;
@@ -48,13 +48,15 @@ body {
   overflow: hidden;
 }
 
-/* HERO IMAGE FIX (IMPORTANT) */
+/* BACKGROUND IMAGE FIX */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("https://images.unsplash.com/photo-1594737625785-cfc6f0c8b0b3") center/cover no-repeat;
-  transform: scale(1.05);
+
+  background: url("https://images.unsplash.com/photo-1594737625785-cfc6f0c8b0b3")
+  center/cover no-repeat;
+
   z-index: 0;
 }
 
@@ -78,7 +80,6 @@ body {
 .hero h1 {
   font-size: clamp(28px, 5vw, 48px);
   color: #00ff99;
-  font-weight: bold;
 }
 
 .hero p {
@@ -128,7 +129,7 @@ h2 {
   margin: auto;
 }
 
-/* BOX & CARD */
+/* BOX / CARD */
 .box, .card {
   background: #1a1a1a;
   padding: 20px;
