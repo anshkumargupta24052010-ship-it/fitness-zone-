@@ -48,17 +48,7 @@ body {
   overflow: hidden;
 }
 
-/* BACKGROUND IMAGE FIX */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
 
-  background: url("https://images.unsplash.com/photo-1594737625785-cfc6f0c8b0b3")
-  center/cover no-repeat;
-
-  z-index: 0;
-}
 
 /* DARK OVERLAY */
 .overlay {
