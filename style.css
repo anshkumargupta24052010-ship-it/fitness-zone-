@@ -1,39 +1,42 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial;
   background: #0a0a0a;
   color: white;
   text-align: center;
-  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 .navbar {
-  position: sticky;
-  top: 0;
-  background: black;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
-  z-index: 1000;
+  padding: 15px;
+  background: black;
+  position: sticky;
+  top: 0;
 }
 
 .nav-btn {
   background: #00ff99;
   padding: 8px 15px;
   color: black;
-  text-decoration: none;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
-  position: relative;
   height: 90vh;
-  background: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .overlay {
@@ -45,10 +48,11 @@ body {
 
 .hero-content {
   position: relative;
+  padding: 20px;
 }
 
 .hero h1 {
-  font-size: 55px;
+  font-size: 40px;
   color: #00ff99;
 }
 
@@ -56,29 +60,25 @@ body {
   color: #ccc;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 12px 20px;
   background: #00ff99;
   color: black;
-  font-weight: bold;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 6px;
-  margin-top: 15px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
+  margin-top: 10px;
 }
 
 /* SECTIONS */
 section {
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 h2 {
   color: #00ff99;
+  margin-bottom: 20px;
 }
 
 /* GRID */
@@ -88,23 +88,12 @@ h2 {
   justify-content: center;
 }
 
-.box {
+.box, .card {
   background: #1a1a1a;
   margin: 10px;
   padding: 20px;
-  border: 1px solid #00ff99;
   border-radius: 10px;
-  width: 180px;
-}
-
-/* CARDS */
-.card {
-  background: #151515;
-  margin: 10px;
-  padding: 20px;
-  border-left: 4px solid #00ff99;
-  display: inline-block;
-  min-width: 220px;
+  width: 250px;
 }
 
 /* CTA */
@@ -116,18 +105,31 @@ h2 {
 footer {
   padding: 15px;
   background: black;
-  font-size: 13px;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   background: #00ff99;
-  color: black;
   padding: 15px;
   border-radius: 50%;
-  font-size: 20px;
   text-decoration: none;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box, .card {
+    width: 90%;
+  }
 }
