@@ -49,19 +49,14 @@ body {
 }
 
 /* 👇 MAIN IMAGE ADDED HERE */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image: url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  z-index: 0;
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 /* DARK OVERLAY */
 .overlay {
   position: absolute;
