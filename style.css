@@ -24,76 +24,102 @@ body {
   z-index: 1000;
 }
 
+.navbar h2 {
+  font-size: 20px;
+}
+
 .nav-btn {
   background: #00ff99;
   padding: 8px 15px;
   color: black;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
 }
 
 /* HERO */
 .hero {
-  min-height: 70vh;
-  background: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b") no-repeat center;
-  background-size: cover;
+  position: relative;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
+/* HERO IMAGE FIX (IMPORTANT) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://images.unsplash.com/photo-1594737625785-cfc6f0c8b0b3") center/cover no-repeat;
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+/* DARK OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
 }
 
+/* HERO CONTENT */
 .hero-content {
   position: relative;
+  z-index: 2;
   padding: 20px;
   max-width: 900px;
 }
 
-/* RESPONSIVE TEXT */
+/* TEXT RESPONSIVE */
 .hero h1 {
-  font-size: clamp(24px, 5vw, 42px);
+  font-size: clamp(28px, 5vw, 48px);
   color: #00ff99;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: clamp(14px, 2.5vw, 20px);
+  margin-top: 8px;
 }
 
 .sub {
   color: #ccc;
-  font-size: clamp(14px, 2vw, 18px);
-  margin-top: 10px;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  padding: 12px 20px;
+  margin-top: 15px;
+  padding: 12px 22px;
   background: #00ff99;
   color: black;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
-  margin-top: 15px;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 /* SECTIONS */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 h2 {
   color: #00ff99;
-  margin-bottom: 20px;
-  font-size: clamp(20px, 3vw, 30px);
+  margin-bottom: 25px;
+  font-size: clamp(20px, 3vw, 32px);
 }
 
-/* GRID (AUTO RESPONSIVE MAGIC) */
+/* GRID (AUTO RESPONSIVE) */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -102,7 +128,7 @@ h2 {
   margin: auto;
 }
 
-/* BOX / CARD */
+/* BOX & CARD */
 .box, .card {
   background: #1a1a1a;
   padding: 20px;
@@ -112,11 +138,13 @@ h2 {
 
 .box:hover, .card:hover {
   transform: translateY(-5px);
+  background: #222;
 }
 
 /* CTA */
 .cta {
   background: #111;
+  padding: 60px 20px;
 }
 
 /* FOOTER */
@@ -125,6 +153,7 @@ footer {
   background: black;
   text-align: center;
   font-size: 14px;
+  color: #aaa;
 }
 
 /* WHATSAPP BUTTON */
@@ -135,11 +164,12 @@ footer {
   background: #00ff99;
   padding: 14px;
   border-radius: 50%;
-  text-decoration: none;
   font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,255,153,0.5);
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE FIX */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -148,10 +178,9 @@ footer {
 
   .hero {
     min-height: 60vh;
-    background-position: top;
   }
 
   section {
-    padding: 30px 15px;
+    padding: 35px 15px;
   }
 }
