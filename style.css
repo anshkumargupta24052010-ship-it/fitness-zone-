@@ -10,6 +10,7 @@ body{
   color:white;
   text-align:center;
   scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -21,139 +22,136 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 20px;
-  background:black;
+  padding:15px 5%;
+  background:rgba(0,0,0,0.9);
   z-index:1000;
 }
 
 .navbar h2{
   color:#00ff99;
-  font-size:32px;
+  font-size:clamp(20px,3vw,34px);
 }
 
 .nav-btn{
   background:#00ff99;
   color:black;
-  padding:12px 18px;
+  padding:10px 18px;
   text-decoration:none;
   border-radius:8px;
   font-weight:bold;
   transition:0.3s;
+  font-size:clamp(12px,1.5vw,16px);
 }
 
 .nav-btn:hover{
   transform:scale(1.05);
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
   position:relative;
-  height:100vh;
+  width:100%;
+  min-height:100vh;
   background:url("gym2.png") center center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
+  padding:120px 20px 60px;
 }
 
 .overlay{
   position:absolute;
-  width:100%;
-  height:100%;
+  inset:0;
   background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  padding:20px;
+  max-width:900px;
 }
 
 .hero h1{
-  font-size:75px;
+  font-size:clamp(42px,8vw,95px);
   color:#00ff99;
-  margin-bottom:15px;
-  text-shadow:0 0 10px #00ff99;
+  line-height:1;
+  margin-bottom:20px;
+  text-shadow:0 0 15px #00ff99;
 }
 
 .hero p{
-  font-size:24px;
+  font-size:clamp(16px,2vw,26px);
   margin-top:10px;
 }
 
 .sub{
-  color:#ddd;
-  margin-bottom:20px;
+  color:#ccc;
+  margin-bottom:25px;
 }
 
 /* BUTTON */
 
 .btn{
   display:inline-block;
-  padding:14px 28px;
+  margin-top:20px;
+  padding:14px 30px;
   background:#00ff99;
   color:black;
-  font-weight:bold;
   text-decoration:none;
   border-radius:8px;
-  margin-top:20px;
+  font-weight:bold;
   transition:0.3s;
+  font-size:clamp(14px,1.5vw,18px);
 }
 
 .btn:hover{
-  transform:scale(1.08);
+  transform:scale(1.05);
   box-shadow:0 0 15px #00ff99;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
-  padding:70px 20px;
+  padding:80px 20px;
 }
 
 h2{
   color:#00ff99;
-  margin-bottom:30px;
-  font-size:35px;
+  margin-bottom:35px;
+  font-size:clamp(28px,4vw,42px);
 }
 
 /* GRID */
 
 .grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+}
+
+.box,
+.card{
+  background:#151515;
+  padding:30px 20px;
+  border-radius:12px;
+  transition:0.3s;
 }
 
 .box{
-  background:#1a1a1a;
-  padding:25px;
   border:1px solid #00ff99;
-  border-radius:12px;
-  width:220px;
-  transition:0.3s;
 }
-
-.box:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 15px #00ff99;
-}
-
-/* CARDS */
 
 .card{
-  background:#151515;
-  padding:25px;
   border-left:4px solid #00ff99;
-  border-radius:10px;
-  width:240px;
-  transition:0.3s;
 }
 
+.box:hover,
 .card:hover{
-  transform:scale(1.05);
+  transform:translateY(-8px);
   box-shadow:0 0 15px #00ff99;
 }
 
@@ -166,10 +164,10 @@ h2{
 /* FOOTER */
 
 footer{
-  padding:20px;
   background:black;
-  font-size:14px;
+  padding:20px;
   color:#aaa;
+  font-size:14px;
 }
 
 /* WHATSAPP */
@@ -189,6 +187,7 @@ footer{
   text-decoration:none;
   font-size:26px;
   box-shadow:0 0 15px #00ff99;
+  z-index:1000;
   transition:0.3s;
 }
 
@@ -196,63 +195,25 @@ footer{
   transform:scale(1.1);
 }
 
-/* MOBILE RESPONSIVE */
+/* SMALL MOBILE */
 
-@media(max-width:768px){
-
-  /* NAVBAR */
-
-  .navbar{
-    padding:12px 15px;
-  }
-
-  .navbar h2{
-    font-size:18px;
-  }
-
-  .nav-btn{
-    padding:10px 14px;
-    font-size:14px;
-  }
-
-  /* HERO */
+@media(max-width:480px){
 
   .hero{
-    height:100vh;
     background-position:center;
   }
 
   .hero h1{
-    font-size:48px;
-    line-height:1.1;
+    font-size:44px;
   }
 
   .hero p{
-    font-size:17px;
+    font-size:16px;
   }
 
-  .sub{
-    font-size:15px;
+  .nav-btn{
+    padding:8px 12px;
   }
-
-  .btn{
-    padding:12px 22px;
-    font-size:15px;
-  }
-
-  /* BOXES */
-
-  .grid{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .box,
-  .card{
-    width:90%;
-  }
-
-  /* WHATSAPP */
 
   .whatsapp{
     width:55px;
