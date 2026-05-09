@@ -1,6 +1,12 @@
-console.log("Megatron Gym Premium Site Loaded");
+console.log("Fitness Zone Loaded");
 
-// smooth animation feel
-window.addEventListener("scroll", () => {
-  document.body.style.opacity = "1";
-});
+function showContent(id) {
+
+  let allContent = document.querySelectorAll(".info-content");
+
+  allContent.forEach(content => {
+    content.style.display = "none";
+  });
+
+  document.getElementById(id).style.display = "block";
+}
