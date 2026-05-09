@@ -161,3 +161,46 @@ footer {
   font-size: 20px;
   text-decoration: none;
 }
+/* CLICKABLE BOXES */
+.box {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background: #00ff99;
+  color: black;
+}
+
+/* INFO BOX */
+.info-box {
+  margin-top: 30px;
+}
+
+.info-content {
+  display: none;
+  background: #151515;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  animation: fade 0.4s ease;
+}
+
+.info-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
