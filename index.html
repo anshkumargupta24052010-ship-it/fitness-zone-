@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitness Zone Ambikapur is a modern gym at Banaras Chowk offering memberships, expert training, Zumba classes, steam sessions, and strength equipment." />
+  <meta name="keywords" content="gym in Ambikapur, Fitness Zone Ambikapur, best gym near Banaras Chowk, Zumba Ambikapur, steam bath Ambikapur, gym membership" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AKG Dev Labs" />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta name="geo.region" content="IN-CT" />
+  <meta name="geo.placename" content="Ambikapur, Chhattisgarh, India" />
+  <meta name="geo.position" content="23.131527;83.182121" />
+  <link rel="canonical" href="https://fitnesszoneambikapur.in/" />
+  <meta property="og:title" content="Fitness Zone Ambikapur | Gym, Zumba &amp; Steam" />
+  <meta property="og:description" content="Build strength, move with energy, and feel your best at Fitness Zone Ambikapur with gym, Zumba, and steam services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fitnesszoneambikapur.in/" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fitness Zone Ambikapur | Gym, Zumba &amp; Steam" />
+  <meta name="twitter:description" content="Join Ambikapur's welcoming fitness community for gym plans, Zumba, and steam sessions." />
+  <title>Fitness Zone Ambikapur | Gym, Zumba &amp; Steam</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthClub",
+      "name": "Fitness Zone Ambikapur",
+      "url": "https://fitnesszoneambikapur.in/",
+      "description": "Modern gym, Zumba classes, steam sessions, and personal training at Banaras Chowk, Ambikapur.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Banaras Chowk, above Nishant Next World",
+        "addressLocality": "Ambikapur",
+        "addressRegion": "Chhattisgarh",
+        "postalCode": "497001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-7723846953",
+      "priceRange": "₹₹",
+      "areaServed": "Ambikapur, Chhattisgarh",
+      "openingHours": "Mo-Sa 05:30-22:00",
+      "hasMap": "https://www.google.com/maps?cid=3898147186916552088",
+      "sameAs": ["https://www.instagram.com/fitnesszoneambikapur/", "https://www.google.com/maps?cid=3898147186916552088"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Fitness Zone Services",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Monthly Gym Membership", "price": "1200", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Zumba", "price": "1000", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Steam Session", "price": "500", "priceCurrency": "INR" }
+        ]
+      }
+    }
+  </script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ---------- Base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+    body {
+      background: #0b0d10;
+      color: #f0f2f5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1d23;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e94f37;
+      border-radius: 8px;
+    }
+
+    /* ---------- Preloader ---------- */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #0b0d10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease;
+    }
+    #preloader.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 5px solid #2a2d33;
+      border-top-color: #e94f37;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ---------- Particles Canvas ---------- */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ---------- Main Wrapper ---------- */
+    .main-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Navbar ---------- */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      flex-wrap: wrap;
+      gap: 12px;
+      animation: fadeDown 0.9s ease;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .logo i {
+      color: #e94f37;
+      font-size: 2rem;
+      filter: drop-shadow(0 0 8px #e94f3766);
+    }
+    .logo span {
+      background: linear-gradient(135deg, #f0f2f5 0%, #e94f37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .nav-links a {
+      color: #b0b8c5;
+      text-decoration: none;
+      transition: 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2.5px;
+      background: #e94f37;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+      color: #fff;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-cta {
+      background: #e94f37;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #fff !important;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #e94f3744;
+    }
+    .nav-cta:hover {
+      transform: scale(1.04);
+      background: #ff5f45;
+      box-shadow: 0 0 30px #e94f3766;
+    }
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 0 40px;
+      flex-wrap: wrap;
+      gap: 30px;
+      min-height: 70vh;
+    }
+    .hero-content {
+      flex: 1 1 500px;
+      animation: fadeUp 1s ease;
+    }
+    .hero-content .badge {
+      display: inline-block;
+      background: rgba(233, 79, 55, 0.18);
+      color: #e94f37;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(233, 79, 55, 0.25);
+    }
+    .hero-content h1 {
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .hero-content h1 .highlight {
+      background: linear-gradient(135deg, #e94f37, #f7a072);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #b0b8c5;
+      max-width: 520px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn-primary {
+      background: #e94f37;
+      border: none;
+      padding: 14px 38px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 8px 28px #e94f3744;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.02);
+      background: #ff5f45;
+      box-shadow: 0 12px 36px #e94f3766;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #3a3f49;
+      padding: 14px 38px;
+      border-radius: 60px;
+      font-weight: 600;
+      color: #f0f2f5;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: #e94f37;
+      color: #e94f37;
+      transform: translateY(-4px);
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+    .hero-stats div {
+      text-align: left;
+    }
+    .hero-stats a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .hero-stats a:hover .num,
+    .hero-stats a:focus-visible .num {
+      color: #ffad98;
+    }
+    .hero-stats .num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .hero-stats .label {
+      font-size: 0.9rem;
+      color: #8d96a8;
+    }
+    .hero-visual {
+      flex: 1 1 400px;
+      display: flex;
+      justify-content: center;
+      animation: fadeUp 1.2s ease;
+    }
+    .hero-visual .circle-bg {
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle at 30% 30%, #e94f3722, #0b0d10 70%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-visual .circle-bg i {
+      font-size: 10rem;
+      color: #e94f37;
+      filter: drop-shadow(0 0 40px #e94f3766);
+      animation: float 4s ease-in-out infinite;
+    }
+    .hero-visual .circle-bg::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 2px dashed rgba(233, 79, 55, 0.2);
+      animation: spinSlow 30s linear infinite;
+    }
+
+    /* ---------- Video Section (NEW) ---------- */
+    .video-section {
+      padding: 40px 0 30px;
+      text-align: center;
+    }
+    .video-section h2 {
+      margin-bottom: 20px;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      border: 1px solid #252b33;
+    }
+    .video-container video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+
+    /* ---------- Section Titles ---------- */
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      color: #8d96a8;
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .section-title .highlight {
+      background: linear-gradient(135deg, #e94f37, #f7a072);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---------- Services ---------- */
+    .services {
+      padding: 60px 0 30px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+    }
+    .service-card {
+      background: #14181f;
+      padding: 32px 22px;
+      border-radius: 28px;
+      border: 1px solid #252b33;
+      transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+      animation: cardReveal 0.7s both;
+      animation-delay: calc(var(--card-index, 0) * 100ms);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #e94f37, #f7a072);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 0.5s;
+    }
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: #e94f3755;
+      box-shadow: 0 20px 40px #00000055;
+    }
+    .service-card::after,
+    .pricing-card::after,
+    .trainer-card::after,
+    .special-service::before,
+    .facility-card::after,
+    .trainer-profile-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 25%, rgba(255, 255, 255, 0.09) 48%, transparent 70%);
+      transform: translateX(-120%);
+      transition: transform 0.7s ease;
+      pointer-events: none;
+    }
+    .service-card:hover::after,
+    .pricing-card:hover::after,
+    .trainer-card:hover::after,
+    .special-service:hover::before,
+    .facility-card:hover::after,
+    .trainer-profile-card:hover::after {
+      transform: translateX(120%);
+    }
+    .service-card i {
+      font-size: 2.6rem;
+      color: #e94f37;
+      margin-bottom: 18px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .service-card:hover i {
+      transform: scale(1.1) rotate(-4deg);
+    }
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      color: #8d96a8;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .service-card {
+      cursor: pointer;
+    }
+    .service-card.active {
+      border-color: rgba(233, 79, 55, 0.8);
+      box-shadow: 0 18px 36px rgba(233, 79, 55, 0.15);
+      transform: translateY(-8px);
+    }
+
+    .details-shell {
+      display: none;
+      margin-top: 24px;
+      background: linear-gradient(180deg, rgba(20, 24, 31, 0.98), rgba(12, 15, 20, 0.98));
+      border: 1px solid #252b33;
+      border-radius: 32px;
+      padding: 22px 20px 26px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+      animation: fadeUp 0.35s ease;
+    }
+    .details-shell.active {
+      display: block;
+    }
+    .detail-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .back-btn {
+      border: 1px solid rgba(233, 79, 55, 0.5);
+      background: rgba(233, 79, 55, 0.08);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 18px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #e94f37;
+      color: #fff;
+    }
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+      margin-top: 18px;
+    }
+    .facility-card {
+      background: linear-gradient(180deg, #171c23, #11161d);
+      border: 1px solid #2b313a;
+      border-radius: 22px;
+      overflow: hidden;
+      transition: 0.3s ease;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+      position: relative;
+      animation: cardReveal 0.7s both;
+      animation-delay: calc(var(--card-index, 0) * 80ms);
+    }
+    .facility-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(233, 79, 55, 0.8);
+      box-shadow: 0 20px 32px rgba(233, 79, 55, 0.18);
+    }
+    .facility-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+    .facility-card-body {
+      padding: 18px 14px 16px;
+    }
+    .facility-card h4 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #f3f4f6;
+    }
+    .facility-card .facility-meta {
+      color: #e94f37;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .trainer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+      margin-top: 18px;
+    }
+    .trainer-profile-card {
+      background: #141a21;
+      border: 1px solid #2b313a;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: 0.3s ease;
+      padding-bottom: 14px;
+      position: relative;
+      animation: cardReveal 0.7s both;
+      animation-delay: calc(var(--card-index, 0) * 100ms);
+    }
+    .trainer-profile-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(233, 79, 55, 0.75);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.26);
+    }
+    .trainer-image {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      background: #1d232b;
+    }
+    .trainer-profile-card .trainer-body {
+      padding: 20px 18px 0;
+    }
+    .trainer-profile-card .trainer-name {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .trainer-profile-card .trainer-experience {
+      display: inline-block;
+      background: rgba(233, 79, 55, 0.12);
+      color: #ffb19a;
+      border: 1px solid rgba(233, 79, 55, 0.2);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      margin-bottom: 14px;
+    }
+    .trainer-profile-card .speciality-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .trainer-profile-card .speciality-list li {
+      background: #1d232b;
+      color: #c9d0db;
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 0.76rem;
+      border: 1px solid #303843;
+    }
+
+    /* ---------- Trainers with Images ---------- */
+    .trainers {
+      padding: 50px 0 30px;
+    }
+    .trainers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    .trainer-card {
+      background: #14181f;
+      border-radius: 28px;
+      padding: 28px 18px 22px;
+      text-align: center;
+      border: 1px solid #252b33;
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+      animation: cardReveal 0.7s both;
+      animation-delay: calc(var(--card-index, 0) * 120ms);
+    }
+    .trainer-card:hover {
+      transform: scale(1.03);
+      border-color: #e94f3755;
+      box-shadow: 0 16px 36px #00000066;
+    }
+    .trainer-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e94f3744;
+      transition: 0.3s;
+      margin-bottom: 16px;
+    }
+    .trainer-card:hover img {
+      border-color: #e94f37;
+      box-shadow: 0 0 30px #e94f3733;
+    }
+    .trainer-card h4 {
+      font-size: 1.2rem;
+    }
+    .trainer-card .role {
+      color: #8d96a8;
+      font-size: 0.9rem;
+      margin: 4px 0 10px;
+    }
+    .trainer-card .exp {
+      color: #b0b8c5;
+      font-size: 0.85rem;
+      background: #1e232b;
+      padding: 4px 14px;
+      border-radius: 40px;
+      display: inline-block;
+    }
+
+    /* ---------- Pricing ---------- */
+    .pricing {
+      padding: 50px 0 30px;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+    .pricing-card {
+      background: #14181f;
+      border-radius: 28px;
+      padding: 32px 20px 28px;
+      border: 1px solid #252b33;
+      text-align: center;
+      transition: 0.4s;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      animation: cardReveal 0.7s both;
+      animation-delay: calc(var(--card-index, 0) * 120ms);
+    }
+    .pricing-card.selected,
+    .pricing-card.popular.selected {
+      border-color: #e94f37;
+      box-shadow: 0 0 30px #e94f3722;
+      transform: translateY(-8px);
+    }
+    .pricing-card.popular {
+      border-color: #e94f37;
+      box-shadow: 0 0 30px #e94f3722;
+    }
+    .pricing-card.popular .tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e94f37;
+      padding: 4px 20px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: #e94f3755;
+    }
+    .pricing-card .price {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 12px 0 4px;
+    }
+    .pricing-card .price small {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #8d96a8;
+    }
+    .pricing-card .plan {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .pricing-card ul {
+      list-style: none;
+      margin: 20px 0 24px;
+    }
+    .pricing-card ul li {
+      padding: 6px 0;
+      color: #b0b8c5;
+      font-size: 0.95rem;
+    }
+    .pricing-card ul li i {
+      color: #e94f37;
+      margin-right: 8px;
+    }
+
+    /* ---------- Special Services ---------- */
+    .special-services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      padding: 44px 0 30px;
+    }
+    .special-service {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 28px;
+      border-radius: 28px;
+      border: 1px solid #33404a;
+      background: linear-gradient(135deg, #182b2b 0%, #142022 55%, #241b1b 100%);
+      animation: cardReveal 0.8s both;
+      animation-delay: calc(var(--card-index, 0) * 140ms);
+    }
+    .special-service.steam {
+      background: linear-gradient(135deg, #1a2931 0%, #172126 55%, #1c2721 100%);
+    }
+    .special-service::after {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -70px;
+      top: -80px;
+      border: 1px solid rgba(116, 223, 184, 0.25);
+      border-radius: 50%;
+    }
+    .special-service.steam::after {
+      border-color: rgba(127, 198, 227, 0.25);
+    }
+    .special-service i {
+      color: #72dfb8;
+      font-size: 2.4rem;
+      margin-bottom: 18px;
+    }
+    .special-service.steam i {
+      color: #7fc6e3;
+    }
+    .special-service h3 {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+    .special-service .special-price {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 18px 0 22px;
+    }
+    .special-service .special-price small {
+      color: #9aa9ae;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .special-service .btn-primary {
+      background: #2d9e7c;
+      box-shadow: 0 8px 28px rgba(45, 158, 124, 0.24);
+    }
+    .special-service.steam .btn-primary {
+      background: #347c9c;
+      box-shadow: 0 8px 28px rgba(52, 124, 156, 0.24);
+    }
+
+    /* ---------- Google Map ---------- */
+    .map-section {
+      padding: 50px 0 30px;
+    }
+    .map-container {
+      overflow: hidden;
+      border: 1px solid #252b33;
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+      background: #14181f;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 360px;
+      display: block;
+      border: 0;
+      filter: grayscale(0.25) contrast(1.05);
+    }
+
+    /* ---------- CTA ---------- */
+    .cta-section {
+      background: linear-gradient(145deg, #14181f, #1a1e26);
+      border-radius: 48px;
+      padding: 60px 40px;
+      margin: 50px 0 30px;
+      text-align: center;
+      border: 1px solid #252b33;
+      animation: fadeUp 1s ease;
+    }
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+    .cta-section p {
+      color: #b0b8c5;
+      max-width: 500px;
+      margin: 12px auto 30px;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      border-top: 1px solid #1a1e26;
+      padding: 30px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: #6b7488;
+      font-size: 0.95rem;
+    }
+    .footer .socials a {
+      color: #6b7488;
+      margin-left: 18px;
+      font-size: 1.3rem;
+      transition: 0.3s;
+    }
+    .footer .socials a:hover {
+      color: #e94f37;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- Admin Panel ---------- */
+    .admin-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(4, 6, 9, 0.86);
+      backdrop-filter: blur(10px);
+    }
+    .admin-modal.active {
+      display: flex;
+    }
+    .admin-panel {
+      width: min(980px, 100%);
+      max-height: min(760px, 92vh);
+      overflow: auto;
+      padding: 26px;
+      border: 1px solid #39424d;
+      border-radius: 22px;
+      background: #11161d;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.65);
+    }
+    .admin-header,
+    .admin-actions,
+    .admin-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .admin-header {
+      margin-bottom: 22px;
+    }
+    .admin-header h2 {
+      font-size: 1.5rem;
+    }
+    .admin-close,
+    .admin-small-button,
+    .admin-danger {
+      border: 1px solid #3b4652;
+      border-radius: 8px;
+      padding: 9px 13px;
+      color: #fff;
+      background: #1c252e;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .admin-close:hover,
+    .admin-small-button:hover {
+      border-color: #e94f37;
+      color: #ffad98;
+    }
+    .admin-danger {
+      border-color: #8e3d35;
+      background: #321c1c;
+      color: #ffad98;
+    }
+    .admin-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .admin-tab {
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 2px;
+      color: #8d96a8;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .admin-tab.active {
+      border-color: #e94f37;
+      color: #fff;
+    }
+    .admin-list {
+      display: grid;
+      gap: 12px;
+    }
+    .admin-item {
+      align-items: flex-start;
+      padding: 14px;
+      border: 1px solid #2b333d;
+      border-radius: 12px;
+      background: #171d25;
+    }
+    .admin-item-fields {
+      display: grid;
+      flex: 1;
+      grid-template-columns: minmax(160px, 1fr) minmax(220px, 2fr);
+      gap: 10px;
+    }
+    .admin-item-fields input,
+    .admin-login input {
+      width: 100%;
+      border: 1px solid #39424d;
+      border-radius: 7px;
+      padding: 10px;
+      color: #fff;
+      background: #0d1116;
+    }
+    .admin-actions {
+      margin-top: 18px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .admin-login {
+      width: min(360px, 100%);
+    }
+    .admin-login p {
+      color: #8d96a8;
+      margin: 10px 0 16px;
+      line-height: 1.5;
+    }
+    .admin-error {
+      min-height: 20px;
+      margin-top: 8px;
+      color: #ff9580;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .admin-panel {
+        padding: 18px;
+      }
+      .admin-item {
+        flex-direction: column;
+      }
+      .admin-item-fields {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-18px);
+      }
+    }
+    @keyframes spinSlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-btns {
+        justify-content: center;
+      }
+      .hero-stats {
+        justify-content: center;
+      }
+      .hero-visual .circle-bg {
+        width: 260px;
+        height: 260px;
+      }
+      .hero-visual .circle-bg i {
+        font-size: 6rem;
+      }
+      .cta-section {
+        padding: 40px 20px;
+      }
+      .video-container {
+        border-radius: 16px;
+      }
+      .special-services {
+        grid-template-columns: 1fr;
+      }
+      .map-container iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Particle background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="main-wrapper">
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fas fa-dumbbell"></i>
+        <span>Fitness Zone</span>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#special-services">More</a>
+        <a href="#contact" class="nav-cta"><i class="fas fa-phone-alt"></i> Join Now</a>
+      </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge"><i class="fas fa-fire"></i> Ambikapur's #1 Gym</div>
+        <h1>
+          Transform Your<br />
+          <span class="highlight">Body in 90 Days</span>
+        </h1>
+        <p>
+          Join <strong>150+ members</strong> at Fitness Zone Ambikapur — the biggest gym in the city.
+          Modern equipment, certified coaches, and a community that pushes you further.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary"><i class="fas fa-play"></i> Start Free Trial</a>
+          <a href="#services" class="btn-outline"><i class="fas fa-arrow-right"></i> Explore</a>
+        </div>
+        <div class="hero-stats">
+            <div><a href="https://www.google.com/maps?cid=3898147186916552088" target="_blank" rel="noopener noreferrer" aria-label="View Fitness Zone Ambikapur Google rating"><span class="num">4.7★</span><div class="label">86+ Google reviews</div></a></div>
+          <div><span class="num">150+</span><div class="label">active members</div></div>
+          <div><span class="num">3+</span><div class="label">expert trainers</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="circle-bg">
+          <i class="fas fa-dumbbell"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== VIDEO SECTION (NEW) ====== -->
+    <section class="video-section" id="video">
+      <h2 class="section-title">Watch Our <span class="highlight">Journey</span></h2>
+      <p class="section-sub">Experience the energy and transformation at Fitness Zone Ambikapur.</p>
+      <div class="video-container">
+        <!-- Replace the src with your own video file or use a YouTube embed -->
+        <video controls poster="WhatsApp Video 2026-08-05 at 6.36.00 PM.mp4">
+          <source src="WhatsApp Video 2026-08-05 at 6.36.00 PM.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p style="color:#6b7488; margin-top:12px; font-size:0.9rem;">
+        <i class="fas fa-info-circle" style="color:#e94f37;"></i> 
+      </p>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="services" id="services">
+      <h2 class="section-title">Premium <span class="highlight">Facilities</span></h2>
+      <p class="section-sub">Everything you need to build strength, endurance, and confidence.</p>
+      <div class="services-grid" id="services-grid">
+        <div class="service-card" data-target="equipment" style="--card-index:0" tabindex="0" role="button" aria-label="View modern equipment">
+          <i class="fas fa-weight-hanging"></i>
+          <h3>Modern Equipment</h3>
+          <p>Imported machines &amp; free weights for strength, cardio, and functional training.</p>
+        </div>
+        <div class="service-card" data-target="trainers" style="--card-index:1" tabindex="0" role="button" aria-label="View certified trainers">
+          <i class="fas fa-user-md"></i>
+          <h3>Certified Trainers</h3>
+          <p>Expert coaches with 5–10+ years of experience in body transformation and powerlifting.</p>
+        </div>
+        <div class="service-card" data-target="diet" style="--card-index:2" tabindex="0" role="button" aria-label="View diet plan details">
+          <i class="fas fa-utensils"></i>
+          <h3>Custom Diet Plans</h3>
+          <p>Personalized nutrition for fat loss, muscle gain, and a sustainable healthy lifestyle.</p>
+        </div>
+        <div class="service-card" data-target="training" style="--card-index:3" tabindex="0" role="button" aria-label="View personal training details">
+          <i class="fas fa-users"></i>
+          <h3>Personal Training</h3>
+          <p>One-on-one coaching for faster, safer, and more effective results.</p>
+        </div>
+      </div>
+
+      <div id="detail-view" class="details-shell" aria-live="polite"></div>
+    </section>
+
+    <!-- ====== TRAINERS WITH IMAGES ====== -->
+    <section class="trainers" id="trainers">
+      <h2 class="section-title">Meet Your <span class="highlight">Coaches</span></h2>
+      <p class="section-sub">Learn from the best — experienced, passionate, and ready to guide you.</p>
+      <div class="trainers-grid">
+        <div class="trainer-card" style="--card-index:0">
+          <img src="Assets/yogeshpatel.png" alt="Yogesh Patel" />
+          <h4>Yogesh Patel</h4>
+          <div class="role">Powerlifter &amp; Strength Coach</div>
+          <span class="exp">5+ Years</span>
+        </div>
+        <div class="trainer-card" style="--card-index:1">
+          <img src="Assets/rajeshsingh.png" alt="Rajesh Singh" />
+          <h4>Rajesh Singh</h4>
+          <div class="role">Body Transformation Coach</div>
+          <span class="exp">6+ Years</span>
+        </div>
+        <div class="trainer-card" style="--card-index:2">
+          <img src="Assets/kamlesh.png" alt="Kamlesh" />
+          <h4>Kamlesh</h4>
+          <div class="role">Mobility &amp; Conditioning Specialist</div>
+          <span class="exp">10+ Years</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PRICING ====== -->
+    <section class="pricing" id="pricing">
+      <h2 class="section-title">Membership <span class="highlight">Plans</span></h2>
+      <p class="section-sub">Flexible options to fit your goals and budget.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card" style="--card-index:0" data-plan="Monthly">
+          <div class="plan">Monthly</div>
+          <div class="price">₹1,200 <small>/mo</small></div>
+          <a href="#contact" class="btn-primary plan-button" style="padding:10px 28px;font-size:0.9rem;">Book Monthly</a>
+        </div>
+        <div class="pricing-card popular selected" style="--card-index:1" data-plan="3 Months">
+          <div class="tag">MOST POPULAR</div>
+          <div class="plan">3 Months</div>
+          <div class="price">₹2,500 <small>/3 mo</small></div>
+          <a href="#contact" class="btn-primary plan-button" style="padding:10px 28px;font-size:0.9rem;">Book 3 Months</a>
+        </div>
+        <div class="pricing-card" style="--card-index:2" data-plan="6 Months">
+          <div class="plan">6 Months</div>
+          <div class="price">₹4,500 <small>/6 mo</small></div>
+          <a href="#contact" class="btn-primary plan-button" style="padding:10px 28px;font-size:0.9rem;">Book 6 Months</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SPECIAL SERVICES ====== -->
+    <section class="special-services" id="special-services">
+      <article class="special-service" style="--card-index:0">
+        <i class="fas fa-music"></i>
+        <h3>Zumba</h3>
+        <div class="special-price">₹1,000 <small>/month</small></div>
+        <a href="#contact" class="btn-primary service-booking" data-service="Zumba" data-price="₹1,000/month"><i class="fas fa-arrow-right"></i> Join Zumba</a>
+      </article>
+      <article class="special-service steam" style="--card-index:1">
+        <i class="fas fa-cloud"></i>
+        <h3>Steam Sessions</h3>
+        <div class="special-price">₹500 <small>/session · 3 steams available</small></div>
+        <a href="#contact" class="btn-primary service-booking" data-service="Steam" data-price="₹500/session"><i class="fas fa-arrow-right"></i> Book Steam</a>
+      </article>
+    </section>
+
+    <!-- ====== CTA / CONTACT ====== -->
+    <section class="cta-section" id="contact">
+      <h2>Ready to <span class="highlight">Start</span> Your Journey?</h2>
+      <p>
+        <i class="fas fa-map-pin" style="color:#e94f37;"></i> Banaras Chowk, above Nishant Next World, Ambikapur, CG 497001
+        <br />
+        <i class="fas fa-clock" style="color:#e94f37;"></i> Mon–Sat: 5:30 AM – 10:00 PM · Sunday Closed
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="https://wa.me/917723846953" target="_blank" class="btn-primary" style="background:#25d366;box-shadow:0 8px 28px #25d36644;">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="tel:+917723846953" class="btn-primary" style="background:#1a73e8;box-shadow:0 8px 28px #1a73e844;">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+      <p style="margin-top:24px;font-size:0.9rem;color:#6b7488;">
+        <i class="fas fa-star" style="color:#e94f37;"></i> <a href="https://www.google.com/maps?cid=3898147186916552088" target="_blank" rel="noopener noreferrer" style="color:#b0b8c5;">4.7★ from 86+ Google reviews</a> · Ambikapur's biggest gym
+      </p>
+      <a href="https://www.google.com/maps?cid=3898147186916552088" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-top:16px;"><i class="fab fa-google"></i> View or Leave a Google Review</a>
+    </section>
+
+    <!-- ====== GOOGLE MAP ====== -->
+    <section class="map-section" id="location">
+      <h2 class="section-title">Find <span class="highlight">Fitness Zone</span></h2>
+      <p class="section-sub">Visit us at Banaras Chowk, above Nishant Next World, Ambikapur.</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Fitness+Zone+Ambikapur%2C+Banaras+Chowk&output=embed"
+          title="Fitness Zone Ambikapur on Google Maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+      <div>
+        <div>© 2026 Fitness Zone Ambikapur · All rights reserved</div>
+        <div style="margin-top:8px; color:#8d96a8;">Designed by AKG Dev Labs</div>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/fitnesszoneambikapur/" target="_blank" rel="noopener noreferrer" aria-label="Fitness Zone Ambikapur on Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+917723846953" aria-label="Call Fitness Zone Ambikapur at 7723846953"><i class="fas fa-phone"></i> <span>+91 77238 46953</span></a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ====== ADMIN PANEL ====== -->
+  <div class="admin-modal" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    <div class="admin-panel">
+      <div class="admin-header">
+        <h2 id="admin-title">Site Admin</h2>
+        <button class="admin-close" id="admin-close" type="button" aria-label="Close admin panel">Close</button>
+      </div>
+      <form class="admin-login" id="admin-login">
+        <strong>Admin access</strong>
+        <p>Enter the admin password to edit equipment and trainer cards on this device.</p>
+        <input id="admin-password" type="password" autocomplete="current-password" placeholder="Password" required />
+        <div class="admin-error" id="admin-error" aria-live="polite"></div>
+        <button class="btn-primary" type="submit">Unlock Panel</button>
+      </form>
+      <div id="admin-editor" hidden>
+        <div class="admin-tabs" role="tablist" aria-label="Content type">
+          <button class="admin-tab active" type="button" data-admin-tab="equipment">Equipment cards</button>
+          <button class="admin-tab" type="button" data-admin-tab="trainers">Trainer cards</button>
+        </div>
+        <div class="admin-list" id="admin-list"></div>
+        <div class="admin-actions">
+          <button class="admin-small-button" id="admin-add" type="button">Add card</button>
+          <button class="admin-small-button" id="admin-export" type="button">Export JSON</button>
+          <button class="admin-danger" id="admin-reset" type="button">Reset saved changes</button>
+          <button class="btn-primary" id="admin-save" type="button">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script>
+    // ---------- PRELOADER ----------
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').classList.add('hide');
+    });
+
+    // ---------- PARTICLES ----------
+    (function particles() {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      let w, h;
+      const particles = [];
+      const COUNT = 70;
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * w;
+          this.y = Math.random() * h;
+          this.size = Math.random() * 2.2 + 0.6;
+          this.speedX = (Math.random() - 0.5) * 0.35;
+          this.speedY = (Math.random() - 0.5) * 0.35;
+          this.opacity = Math.random() * 0.5 + 0.15;
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0 || this.x > w) this.speedX *= -1;
+          if (this.y < 0 || this.y > h) this.speedY *= -1;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(233, 79, 55, ${this.opacity})`;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < COUNT; i++) {
+        particles.push(new Particle());
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(233, 79, 55, ${0.08 * (1 - dist / 120)})`;
+              ctx.lineWidth = 0.7;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
+    })();
+
+    // ---------- SMOOTH SCROLL ----------
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ---------- CLICKABLE FACILITY & TRAINER DETAIL VIEWS ----------
+    const detailView = document.getElementById('detail-view');
+    const servicesGrid = document.getElementById('services-grid');
+
+    let equipmentItems = [
+      { name: 'Ab Coaster Machine', count: 1, image: 'Assets/abs.jpeg' },
+      { name: 'Assisted Pullups/Dip Machine', count: 1, image: 'Assets/assistedpullupsordips.jpeg' },
+      { name: 'Lat Pull Down Machine', count: 1, image: 'Assets/back machine.jpeg' },
+      { name: 'Bench Press Machine', count: 1, image: 'Assets/benchpress.jpeg' },
+      { name: 'Decline Press Machine', count: 1, image: 'Assets/decline.jpeg' },
+      { name: 'Treadmill', count: 3, image: 'Assets/treadmill.jpeg' },
+      { name: 'Leg Extension Machine', count: 1, image: 'Assets/extension.jpeg' },
+      { name: 'Incline Press Machine', count: 1, image: 'Assets/inclineear.jpeg' },
+      { name: 'Gym Equipment Detail', count: 1, image: 'Assets/key.jpeg' },
+      { name: 'Leg Press Machine', count: 1, image: 'Assets/leg press.jpeg' },
+      { name: 'Leg Workout Machine', count: 1, image: 'Assets/leg.jpeg' },
+      { name: 'Leg Extension Equipment', count: 1, image: 'Assets/legextension.jpeg' },
+      { name: 'Leg Training Machine', count: 1, image: 'Assets/legs.jpeg' },
+      { name: 'Multi-Trainer Machine', count: 1, image: 'Assets/multitrainer.jpeg' },
+      { name: 'Pec Fly Machine', count: 1, image: 'Assets/pec fly.jpeg' },
+      { name: 'Rowing Machine', count: 1, image: 'Assets/rowing.jpeg' },
+      { name: 'Triceps Machine', count: 1, image: 'Assets/triceps.jpeg' },
+      { name: 'Fitness Zone Equipment', count: 1, image: 'Assets/WhatsApp Image 2026-09-05 at 2.57.35 PM.jpeg' },
+      { name: 'Gym Training Area', count: 1, image: 'Assets/WhatsApp Image 2026-09-05 at 2.57.51 PM.jpeg' }
+    ];
+
+    let trainerCards = [
+      {
+        name: 'Rajesh Singh',
+        image: 'Assets/rajeshsingh.png',
+        role: 'Body Transformation Coach',
+        experience: '7+ Years Experience',
+        specialties: ['Fat Loss', 'Strength', 'Nutrition']
+      },
+      {
+        name: 'Yogesh Patel',
+        image: 'Assets/yogeshpatel.png',
+        role: 'Powerlifter & Strength Coach',
+        experience: '5+ Years Experience',
+        specialties: ['Powerlifting', 'Mobility', 'Core']
+      },
+      {
+        name: 'Kamlesh',
+        image: 'Assets/kamlesh.png',
+        role: 'Mobility & Conditioning Specialist',
+        experience: '10+ Years Experience',
+        specialties: ['Transformation', 'Functional Training', 'Conditioning']
+      }
+    ];
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>'"]/g, character => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[character]));
+    }
+
+    function loadSavedCards(key, fallback) {
+      try {
+        const saved = JSON.parse(localStorage.getItem(key));
+        return Array.isArray(saved) && saved.length ? saved : fallback;
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    equipmentItems = loadSavedCards('fitnessZoneEquipmentCards', equipmentItems);
+    trainerCards = loadSavedCards('fitnessZoneTrainerCards', trainerCards);
+
+    function renderVisibleTrainers() {
+      const trainerGrid = document.querySelector('.trainers-grid');
+      trainerGrid.innerHTML = trainerCards.map((person, index) => `
+        <div class="trainer-card" style="--card-index:${index}">
+          <img src="${escapeHtml(person.image)}" alt="${escapeHtml(person.name)}" />
+          <h4>${escapeHtml(person.name)}</h4>
+          <div class="role">${escapeHtml(person.role || 'Fitness Coach')}</div>
+          <span class="exp">${escapeHtml(person.experience || 'Experienced Coach')}</span>
+        </div>
+      `).join('');
+    }
+
+    renderVisibleTrainers();
+
+    const adminModal = document.getElementById('admin-modal');
+    const adminLogin = document.getElementById('admin-login');
+    const adminEditor = document.getElementById('admin-editor');
+    const adminList = document.getElementById('admin-list');
+    const adminError = document.getElementById('admin-error');
+    let adminTab = 'equipment';
+
+    function renderAdminList() {
+      const cards = adminTab === 'equipment' ? equipmentItems : trainerCards;
+      adminList.innerHTML = cards.map((card, index) => `
+        <div class="admin-item admin-row" data-index="${index}" data-count="${escapeHtml(card.count || 1)}">
+          <div class="admin-item-fields">
+            <input class="admin-name" type="text" value="${escapeHtml(card.name)}" aria-label="${adminTab} card name" placeholder="Card name" />
+            <input class="admin-image" type="text" value="${escapeHtml(card.image)}" aria-label="${adminTab} card image path or URL" placeholder="Image path or URL" />
+          </div>
+          <button class="admin-danger admin-remove" type="button">Remove</button>
+        </div>
+      `).join('');
+    }
+
+    function openAdmin() {
+      adminModal.classList.add('active');
+      adminLogin.hidden = false;
+      adminEditor.hidden = true;
+      adminError.textContent = '';
+      document.getElementById('admin-password').focus();
+    }
+
+    function closeAdmin() {
+      adminModal.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', event => {
+      if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'a') {
+        event.preventDefault();
+        openAdmin();
+      }
+      if (event.key === 'Escape' && adminModal.classList.contains('active')) closeAdmin();
+    });
+
+    adminLogin.addEventListener('submit', event => {
+      event.preventDefault();
+      if (document.getElementById('admin-password').value !== 'fitnesszone@2026') {
+        adminError.textContent = 'Incorrect password.';
+        return;
+      }
+      adminLogin.hidden = true;
+      adminEditor.hidden = false;
+      renderAdminList();
+    });
+
+    document.getElementById('admin-close').addEventListener('click', closeAdmin);
+    document.querySelectorAll('[data-admin-tab]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        adminTab = tab.dataset.adminTab;
+        document.querySelectorAll('[data-admin-tab]').forEach(item => item.classList.toggle('active', item === tab));
+        renderAdminList();
+      });
+    });
+
+    document.getElementById('admin-add').addEventListener('click', () => {
+      adminList.insertAdjacentHTML('beforeend', `
+        <div class="admin-item admin-row" data-index="new" data-count="1">
+          <div class="admin-item-fields">
+            <input class="admin-name" type="text" aria-label="New ${adminTab} card name" placeholder="Card name" />
+            <input class="admin-image" type="text" aria-label="New ${adminTab} card image path or URL" placeholder="Image path or URL" />
+          </div>
+          <button class="admin-danger admin-remove" type="button">Remove</button>
+        </div>
+      `);
+    });
+
+    adminList.addEventListener('click', event => {
+      if (event.target.classList.contains('admin-remove')) event.target.closest('.admin-row').remove();
+    });
+
+    document.getElementById('admin-save').addEventListener('click', () => {
+      const updated = [...adminList.querySelectorAll('.admin-row')].map(row => ({
+        ...((adminTab === 'equipment' ? equipmentItems : trainerCards)[Number(row.dataset.index)] || {}),
+        name: row.querySelector('.admin-name').value.trim() || 'Untitled Card',
+        image: row.querySelector('.admin-image').value.trim(),
+        count: Number(row.dataset.count) || 1
+      })).filter(card => card.image);
+      if (adminTab === 'equipment') {
+        equipmentItems = updated;
+        localStorage.setItem('fitnessZoneEquipmentCards', JSON.stringify(equipmentItems));
+      } else {
+        trainerCards = updated;
+        localStorage.setItem('fitnessZoneTrainerCards', JSON.stringify(trainerCards));
+        renderVisibleTrainers();
+      }
+      showBackGrid();
+      closeAdmin();
+    });
+
+    document.getElementById('admin-reset').addEventListener('click', () => {
+      localStorage.removeItem('fitnessZoneEquipmentCards');
+      localStorage.removeItem('fitnessZoneTrainerCards');
+      window.location.reload();
+    });
+
+    document.getElementById('admin-export').addEventListener('click', () => {
+      const exportData = JSON.stringify({ equipment: equipmentItems, trainers: trainerCards }, null, 2);
+      const download = document.createElement('a');
+      download.href = URL.createObjectURL(new Blob([exportData], { type: 'application/json' }));
+      download.download = 'fitness-zone-content.json';
+      download.click();
+      URL.revokeObjectURL(download.href);
+    });
+
+    function showBackGrid() {
+      servicesGrid.style.display = 'grid';
+      detailView.classList.remove('active');
+      detailView.innerHTML = '';
+    }
+
+    function renderEquipmentPanel() {
+      const cards = equipmentItems.map((item, index) => `
+        <article class="facility-card" style="--card-index:${index}">
+          <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" />
+          <div class="facility-card-body">
+            <h4>${escapeHtml(item.name)}</h4>
+            <div class="facility-meta">${escapeHtml(item.count)} Available</div>
+          </div>
+        </article>
+      `).join('');
+
+      servicesGrid.style.display = 'none';
+      detailView.classList.add('active');
+      detailView.innerHTML = `
+        <div class="detail-header">
+          <h3 class="section-title" style="font-size:1.7rem; margin:0;">Modern <span class="highlight">Equipment</span></h3>
+          <button class="back-btn" type="button">← Back</button>
+        </div>
+        <div class="facility-grid">${cards}</div>
+      `;
+      detailView.querySelector('.back-btn').addEventListener('click', showBackGrid);
+    }
+
+    function renderTrainerPanel() {
+      const cards = trainerCards.map((person, index) => `
+        <article class="trainer-profile-card" style="--card-index:${index}">
+          <img class="trainer-image" src="${escapeHtml(person.image)}" alt="${escapeHtml(person.name)}" />
+          <div class="trainer-body">
+            <h4 class="trainer-name">${escapeHtml(person.name)}</h4>
+            <div class="trainer-experience">${escapeHtml(person.experience)}</div>
+            <ul class="speciality-list">
+              ${person.specialties.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+            </ul>
+          </div>
+        </article>
+      `).join('');
+
+      servicesGrid.style.display = 'none';
+      detailView.classList.add('active');
+      detailView.innerHTML = `
+        <div class="detail-header">
+          <h3 class="section-title" style="font-size:1.7rem; margin:0;">Certified <span class="highlight">Trainers</span></h3>
+          <button class="back-btn" type="button">← Back</button>
+        </div>
+        <div class="trainer-grid">${cards}</div>
+      `;
+      detailView.querySelector('.back-btn').addEventListener('click', showBackGrid);
+    }
+
+    function renderDietPanel() {
+      servicesGrid.style.display = 'none';
+      detailView.classList.add('active');
+      detailView.innerHTML = `
+        <div class="detail-header">
+          <h3 class="section-title" style="font-size:1.7rem; margin:0;">Custom <span class="highlight">Diet Plans</span></h3>
+          <button class="back-btn" type="button">← Back</button>
+        </div>
+        <div class="facility-grid">
+          <article class="facility-card">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80" alt="Weight loss plan" />
+            <div class="facility-card-body">
+              <h4>Fat Loss Diet</h4>
+              <div class="facility-meta">Personalized</div>
+            </div>
+          </article>
+          <article class="facility-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Muscle gain plan" />
+            <div class="facility-card-body">
+              <h4>Muscle Gain</h4>
+              <div class="facility-meta">Macro-Based</div>
+            </div>
+          </article>
+          <article class="facility-card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Balanced lifestyle plan" />
+            <div class="facility-card-body">
+              <h4>Healthy Lifestyle</h4>
+              <div class="facility-meta">Sustainable</div>
+            </div>
+          </article>
+        </div>
+      `;
+      detailView.querySelector('.back-btn').addEventListener('click', showBackGrid);
+    }
+
+    function renderTrainingPanel() {
+      servicesGrid.style.display = 'none';
+      detailView.classList.add('active');
+      detailView.innerHTML = `
+        <div class="detail-header">
+          <h3 class="section-title" style="font-size:1.7rem; margin:0;">Personal <span class="highlight">Training</span></h3>
+          <button class="back-btn" type="button">← Back</button>
+        </div>
+        <div class="facility-grid">
+          <article class="facility-card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="One on one coaching" />
+            <div class="facility-card-body">
+              <h4>1:1 Coaching</h4>
+              <div class="facility-meta">Goal-Based</div>
+            </div>
+          </article>
+          <article class="facility-card">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Strength program" />
+            <div class="facility-card-body">
+              <h4>Strength Program</h4>
+              <div class="facility-meta">Weekly tracking</div>
+            </div>
+          </article>
+          <article class="facility-card">
+            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=900&q=80" alt="Performance plan" />
+            <div class="facility-card-body">
+              <h4>Performance Plan</h4>
+              <div class="facility-meta">Progress review</div>
+            </div>
+          </article>
+        </div>
+      `;
+      detailView.querySelector('.back-btn').addEventListener('click', showBackGrid);
+    }
+
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+      const activate = () => {
+        serviceCards.forEach(item => item.classList.toggle('active', item === card));
+        const target = card.dataset.target;
+        if (target === 'equipment') renderEquipmentPanel();
+        if (target === 'trainers') renderTrainerPanel();
+        if (target === 'diet') renderDietPanel();
+        if (target === 'training') renderTrainingPanel();
+      };
+
+      card.addEventListener('click', activate);
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          activate();
+        }
+      });
+    });
+
+    // ---------- MEMBERSHIP PLAN SELECTION + WHATSAPP REDIRECT ----------
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    const whatsappNumber = '917723846953';
+
+    function getWhatsAppUrl(message) {
+      return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    }
+
+    function selectPlan(card) {
+      pricingCards.forEach(item => item.classList.toggle('selected', item === card));
+      pricingCards.forEach(planCard => {
+        const plan = planCard.dataset.plan || 'Membership Plan';
+        const message = `Hi, I want to join the gym with this plan: ${plan}. Please share the joining details.`;
+        planCard.querySelector('.plan-button').href = getWhatsAppUrl(message);
+      });
+    }
+
+    pricingCards.forEach(card => {
+      card.addEventListener('click', () => selectPlan(card));
+      card.querySelector('.plan-button').addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        selectPlan(card);
+        window.location.href = card.querySelector('.plan-button').href;
+      });
+    });
+
+    const defaultSelectedPlan = document.querySelector('.pricing-card.selected');
+    if (defaultSelectedPlan) {
+      selectPlan(defaultSelectedPlan);
+    }
+
+    document.querySelectorAll('.service-booking').forEach(button => {
+      const service = button.dataset.service;
+      const price = button.dataset.price;
+      button.href = getWhatsAppUrl(`Hi, I am interested in ${service} at Fitness Zone Ambikapur (${price}). Please share the booking details.`);
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        window.location.href = button.href;
+      });
+    });
+
+    // ---------- COUNTER ANIMATION ----------
+    function animateCounters() {
+      const stats = document.querySelectorAll('.hero-stats .num');
+      stats.forEach(el => {
+        const target = parseFloat(el.innerText);
+        if (isNaN(target)) return;
+        let current = 0;
+        const step = Math.ceil(target / 40);
+        const interval = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.innerText = target + (el.innerText.includes('★') ? '★' : '+');
+            clearInterval(interval);
+          } else {
+            el.innerText = current + (el.innerText.includes('★') ? '★' : '');
+          }
+        }, 30);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) observer.observe(heroStats);
+  </script>
+
+</body>
+</html>
